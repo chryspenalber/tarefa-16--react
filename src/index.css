@@ -1,6 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 10px;;
 }
 
 form {
@@ -9,10 +21,41 @@ form {
   flex-direction: column;
   gap: 8px;
   max-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #666;
+  background-color: #fafafa;
 }
 
 button {
   cursor: pointer;
+  padding: 10px 16px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #555;
 }
 
 .lista-produtos {
@@ -22,7 +65,29 @@ button {
 }
 
 .produto-card {
+  background: white;
   border: 1px solid #ddd;
   padding: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+}
+
+.produto-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
