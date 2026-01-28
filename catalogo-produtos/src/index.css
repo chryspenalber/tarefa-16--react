@@ -1,11 +1,28 @@
-.produto-card {
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 8px;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 300px;
+}
+
+button {
+  cursor: pointer;
 }
 
 .lista-produtos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
+}
+
+.produto-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 6px;
 }
